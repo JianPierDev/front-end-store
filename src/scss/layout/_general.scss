@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+// Header
+.header {
+    text-align: center;
+    padding: 2rem 0;
+}
+.navegacion {
+    background-color: v.$primarioOscuro;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    &__enlace {
+        color: v.$blanco;
+        &--activo {
+            color: v.$secundario;
+        }
+        &:hover {
+            color: v.$secundario;
+        }
+    }
+}
+.main {
+    @include m.contenedor;
+}
+
+
+// Footer
+.footer {
+    background-color: v.$primarioOscuro;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    &__texto {
+        font-size: 2.2rem;
+    }
+}

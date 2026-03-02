@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nosotros {
+    &__imagen {
+        width: 100%;
+    }
+    &__texto {
+        font-family: sans-serif;
+        font-size: 1.8rem;
+    }
+    @include m.desktop {
+        @include m.grid(2);
+        align-items: center;
+    }
+}
+.bloques {
+    @include m.tablet {
+        @include m.grid(2);
+    }
+    @include m.desktop {
+        @include m.grid(4)
+    }
+    .bloque {
+        &__titulo {
+            margin: 0;
+        }
+        &__imagen {
+            display: block;
+            margin: 0 auto;
+        }
+        &__texto {
+            font-family: sans-serif;
+            text-align: center;
+        }
+    }
+}
